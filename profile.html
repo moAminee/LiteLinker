@@ -15,6 +15,67 @@
 
 
     <style>
+
+#add-btn {
+    position: fixed;
+    z-index: 99999;
+    bottom: 10%;
+    right: 10%;
+    
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    
+    text-align: center;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    
+    /* Make it a circle */
+    border-radius: 50%;
+    width: 80px; /* You can adjust the size */
+    height: 80px; /* You can adjust the size */
+    line-height: 80px; /* Should be the same as height to center text vertically */
+    
+    /* Add shadow for the floating effect */
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2);
+
+    /* Add a border to the background */
+    border: 2px solid #F0ECFF; /* You can adjust the color and width */
+
+    /* Make it bigger on hover */
+    transition: all 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+#add-btn:hover {
+    transform: scale(1.1); /* Make it 10% bigger on hover */
+}
+          /* Default styles for larger screens */
+    #main-info-image {
+        width: 120px;
+        height: 120px;
+        border-radius: 200px !important;
+        align-self: center;
+        margin-top: 16px;
+
+    }
+
+    /* Media query for screens smaller than 576px (extra-small devices) */
+    
+    @media (max-width: 575.98px) {
+        #main-info-image {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto;
+            display: block;
+            /* Adjust other styles as needed for smaller screens */
+            
+        }
+         /* Center the content within each column */
+         #main-info, .number-info  {
+            text-align: center;
+        }
+    }
+
+
         body{
             background: #f0ecff;
         }
@@ -23,20 +84,7 @@
             margin-top: 30px;
         }
 
-        #add-btn {
-            position: fixed;
-            bottom: 5%;
-            right: 7%;
-            height: 70px;
-            width: 70px;
-            font-size: 50px;
-            color: white;
-            border-radius: 100px;
-            /* line-height: 0; */
-            text-align: center;
-            cursor: pointer;
-            box-shadow: 0px 10px 10px rgba(0,0,0, 0.3);
-        }
+      
 
         .user-main-info{
             font-weight: 500;
@@ -207,8 +255,10 @@
     <!-- //=======MODALS=======// -->
 
     <!-- ======= Add Post Button ======= -->
-    <div class="bg-primary" id="add-btn" onclick="addBtnClicked()">
-        +
+    <div title="Add Post">
+        <span id="add-btn" class="material-symbols-outlined" onclick="addBtnClicked()">
+            add_circle
+        </span>
     </div>
 
 
@@ -288,49 +338,42 @@
         <div class="d-flex justify-content-center mt-5">
             <div class="col-9">
 
-                <!-- MAIN INFO -->
-                <div class="card shadow">
+              <!-- MAIN INFO -->
+<div class="card shadow">
+    <div class="card-body">
+        <div class="row">
 
-                    <div class="card-body">
-                        <div class="row">
-                            <!-- USER IMAGE COL -->
-                            <div class="col-2">
-                                <img id="main-info-image" src="" alt="" style="width: 120px; height: 120px; border-radius: 200px !important;">
-                            </div>
-                            <!--// USER IMAGE COL //-->
+            <!-- USER IMAGE COL -->
+            <div class="col-12 col-sm-4 col-md-2 mb-3" style="    align-self: center;">
+                <img id="main-info-image" src="" alt="" class="img-fluid rounded-circle">
+            </div>
+            <!--// USER IMAGE COL //-->
 
-                            <!-- USERNAME - EMAIL - NAME -->
-                            <div id="main-info"class="col-4 d-flex flex-column justify-content-evenly" style="font-weight: 900;">
-                                <div class="user-main-info" id="main-info-email">
-                                    
-                                </div>
-
-                                <div class="user-main-info" id="main-info-name">
-                                    
-                                </div>
-
-                                <div class="user-main-info" id="main-info-username">
-                                    
-                                </div>
-                            </div>
-                            <!--// USERNAME - EMAIL - NAME //-->
+            <!-- USERNAME - EMAIL - NAME -->
+            <div id="main-info" class="col-12 col-sm-4 col-md-4 d-flex flex-column justify-content-evenly" style="font-weight: 900;">
+                <div class="user-main-info" id="main-info-email"></div>
+                <div class="user-main-info" id="main-info-name"></div>
+                <div class="user-main-info" id="main-info-username"></div>
+            </div>
+            <!--// USERNAME - EMAIL - NAME //-->
 
 
-                            <!-- POSTS & COMMENTS COUNT -->
-                            <div class="col-4  d-flex flex-column justify-content-evenly">
-                                <div class="number-info">
-                                    <span id="posts-count"></span> Posts
-                                </div>
-
-                                <div class="number-info">
-                                    <span id="comments-count"></span> Comments
-                                </div>
-                            </div>
-                            <!--// POSTS & COMMENTS COUNT //-->
-                        </div>
-                    </div>
+            <!-- POSTS & COMMENTS COUNT -->
+            <div class="col-12 col-sm-4 col-md-4 d-flex flex-column justify-content-evenly">
+                <div class="number-info">
+                    <span id="posts-count"></span> Posts
                 </div>
-                <!-- MAIN INFO -->
+                <div class="number-info">
+                    <span id="comments-count"></span> Comments
+                </div>
+            </div>
+            <!--// POSTS & COMMENTS COUNT //-->
+
+        </div>
+    </div>
+</div>
+<!-- MAIN INFO -->
+
 
                 <!-- POSTS TITLE -->
                 <div class="row mt-5">

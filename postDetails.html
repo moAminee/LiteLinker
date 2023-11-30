@@ -5,16 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     
     <!-- SCRIPTS -->
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="./node_modules/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
 
     <style>
+
+#add-btn {
+    position: fixed;
+    z-index: 99999;
+    bottom: 10%;
+    right: 10%;
+    
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    
+    text-align: center;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    
+    /* Make it a circle */
+    border-radius: 50%;
+    width: 80px; /* You can adjust the size */
+    height: 80px; /* You can adjust the size */
+    line-height: 80px; /* Should be the same as height to center text vertically */
+    
+    /* Add shadow for the floating effect */
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2);
+
+    /* Add a border to the background */
+    border: 2px solid #F0ECFF; /* You can adjust the color and width */
+
+    /* Make it bigger on hover */
+    transition: all 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+#add-btn:hover {
+    transform: scale(1.1); /* Make it 10% bigger on hover */
+}
         body{
             background: #f0ecff;
         }
@@ -23,21 +54,7 @@
             margin-top: 30px;
         }
 
-        #add-btn {
-            position: fixed;
-            bottom: 5%;
-            right: 7%;
-            height: 70px;
-            width: 70px;
-            font-size: 50px;
-            color: white;
-            border-radius: 100px;
-            /* line-height: 0; */
-            text-align: center;
-            cursor: pointer;
-            box-shadow: 0px 10px 10px rgba(0,0,0, 0.3);
-        }
-
+       
         .card-body,.card-header{
             cursor: pointer;
         }
@@ -197,10 +214,12 @@
     <!-- //=======MODALS=======// -->
 
 
-    <!-- ======= Add Post Button ======= -->
-    <div class="bg-primary" id="add-btn" onclick="addBtnClicked()">
-        +
-    </div>
+  <!-- ======= Add Post Button ======= -->
+  <div title="Add Post">
+    <span id="add-btn" class="material-symbols-outlined" onclick="addBtnClicked()">
+        add_circle
+    </span>
+</div>
 
 
     <!-- =============ALERTS========== -->

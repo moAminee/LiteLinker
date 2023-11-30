@@ -25,19 +25,41 @@
         }
 
         #add-btn {
-            position: fixed;
-            bottom: 5%;
-            right: 7%;
-            height: 70px;
-            width: 70px;
-            font-size: 50px;
-            color: white;
-            border-radius: 100px;
-            /* line-height: 0; */
-            text-align: center;
-            cursor: pointer;
-            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
-        }
+    position: fixed;
+    z-index: 99999;
+    bottom: 10%;
+    right: 10%;
+    
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    
+    text-align: center;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    
+    /* Make it a circle */
+    border-radius: 50%;
+    width: 80px; /* You can adjust the size */
+    height: 80px; /* You can adjust the size */
+    line-height: 80px; /* Should be the same as height to center text vertically */
+    
+    /* Add shadow for the floating effect */
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2);
+
+    /* Add a border to the background */
+    border: 2px solid #F0ECFF; /* You can adjust the color and width */
+
+    /* Make it bigger on hover */
+    transition: all 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+#add-btn:hover {
+    transform: scale(1.1); /* Make it 10% bigger on hover */
+}
+
+
+
+
 
 
         /* ========== LOADER STYLES ========= */
@@ -318,9 +340,12 @@
 
 
     <!-- ======= Add Post Button ======= -->
-    <div class="bg-primary" id="add-btn" onclick="addBtnClicked()">
-        +
+    <div title="Add Post">
+        <span id="add-btn" class="material-symbols-outlined" onclick="addBtnClicked()">
+            add_circle
+        </span>
     </div>
+    
 
 
     <!-- =============ALERTS========== -->
@@ -359,7 +384,7 @@
                             <div class="d-flex w-100 justify-content-end" id="logged-in-div">
                                 <button title="LOGIN" id="login-btn" type="button" data-bs-toggle="modal"
                                     data-bs-target="#login-modal" class="btn btn-outline-success mx-2"><span
-                                        class="material-symbols-outlined" >
+                                        class="material-symbols-outlined">
                                         login
                                     </span></button>
                                 <button title="REGISTER" id="register-btn" type="button" data-bs-toggle="modal"
@@ -373,13 +398,14 @@
                             <!-- FOR LOGGED IN USER -->
                             <div class="d-flex w-100 justify-content-end align-items-center" id="logout-div">
                                 <img id="nav-user-image" class="rounded-circle" style="width: 40px; height: 40px"
-                                    src="./profile-pics/1.png" alt="" >
+                                    src="./profile-pics/1.png" alt="">
 
                                 <b id="nav-username">
 
                                 </b>
-                                <button title="LOGOUT" onclick="logout()" id="logout-btn" type="button" data-bs-toggle="modal"
-                                    class="btn btn-outline-danger mx-2"><span class="material-symbols-outlined">
+                                <button title="LOGOUT" onclick="logout()" id="logout-btn" type="button"
+                                    data-bs-toggle="modal" class="btn btn-outline-danger mx-2"><span
+                                        class="material-symbols-outlined">
                                         logout
                                     </span></button>
                             </div>
