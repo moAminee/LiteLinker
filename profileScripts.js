@@ -22,7 +22,7 @@ function getUser()
         document.getElementById("main-info-name").innerHTML = user.name
         document.getElementById("main-info-username").innerHTML = user.username
         document.getElementById("main-info-image").src = user.profile_image
-        document.getElementById("name-posts").innerHTML = `${user.username}'s`
+        document.getElementById("name-posts").innerHTML = `${user.username}'s Posts :`
         
 
         // posts & comments count
