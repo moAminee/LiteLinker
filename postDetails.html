@@ -222,7 +222,7 @@
                                 <a class="nav-link active" aria-current="page" href="home.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" onclick="profileClicked()" style="cursor: pointer">Profile</a>
+                                <a class="nav-link" onclick="profileClicked()" style="cursor: pointer" id="ProfileBtn">Profile</a>
                             </li>
                         </ul>
 
@@ -350,6 +350,7 @@
     getPost()
 
     function getPost() {
+        toggleLoader(true)
         axios.get(`${baseUrl}/posts/${id}`)
         .then((response) => {
             const data = response.data
@@ -358,7 +359,12 @@
             console.log(comments)
             fillPost(post)
             fillComments(comments)
-        })
+        }).catch((error) => {
+        const message = error.response.data.message
+        showAlert(message, "danger")
+    }).finally(()=> {
+        toggleLoader(false)
+    })
     }
     
 
