@@ -121,6 +121,9 @@ function setupUI()
 
     const loginDiv = document.getElementById("logged-in-div")
     const logoutDiv = document.getElementById("logout-div")
+    // add profile btn 
+    const profileBtn = document.getElementById("ProfileBtn")
+
 
     // add btn
     const addBtn = document.getElementById("add-btn")
@@ -132,6 +135,7 @@ function setupUI()
             addBtn.style.setProperty("display", "none", "important")
         }
         
+        profileBtn.style.setProperty("display", "none", "important")
         loginDiv.style.setProperty("display", "flex", "important")
         logoutDiv.style.setProperty("display", "none", "important")
     }else { // for logged in user
@@ -143,7 +147,7 @@ function setupUI()
         
         loginDiv.style.setProperty("display", "none", "important")
         logoutDiv.style.setProperty("display", "flex", "important")
-
+        profileBtn.style.setProperty("display", "block", "important")
         const user = getCurrentUser()
         document.getElementById("nav-username").innerHTML = user.username
         document.getElementById("nav-user-image").src = user.profile_image
@@ -296,6 +300,7 @@ function getCurrentUser()
     {
         user = JSON.parse(storageUser)
     }
-    
+
     return user
+   
 }
