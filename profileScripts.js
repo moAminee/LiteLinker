@@ -35,7 +35,7 @@ function getUser()
 function getPosts()
 {
     const id = getCurrentUserId()
-    
+    toggleLoader(true)
     axios.get(`${baseUrl}/users/${id}/posts`)
     .then((response) => {
         const posts = response.data.data
@@ -126,6 +126,11 @@ function getPosts()
                 document.getElementById(currentPostTagsId).innerHTML += tagsContent
             }
         }
+    }).catch((error) => {
+        const message = error.response.data.message
+        showAlert(message, "danger")
+    }).finally(()=> {
+        toggleLoader(false)
     })
 
 }

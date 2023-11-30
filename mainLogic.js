@@ -188,7 +188,7 @@ function loginBtnClicked()
     })
 }
 
-function toggleLoader(show = true)
+function toggleLoader(show = false)
 {
     if(show)
     {
