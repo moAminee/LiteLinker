@@ -315,3 +315,8 @@ function addBtnClicked()
     let postModal = new bootstrap.Modal(document.getElementById("create-post-modal"), {})
     postModal.toggle()
 }
+
+function postClicked(postId){
+    // alert(postId)
+    window.location = `postDetails.html?postId=${postId}`
+}

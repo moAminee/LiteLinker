@@ -140,10 +140,7 @@
 
     
 
-    function postClicked(postId){
-        // alert(postId)
-        window.location = `postDetails.html?postId=${postId}`
-    }
+ 
 
 
     
