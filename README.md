@@ -43,9 +43,13 @@ Special thanks to Tarmeez for providing the free API for educational purposes.
 
 linkden : https://www.linkedin.com/in/mohammed-amine-boukhalit-130357295/
 
+![social media opensource litelinker](https://github.com/moAminee/LiteLinker/blob/main/readme/1.png)
 
-![Social Media Opensource litelinker]([Image URL](https://github.com/moAminee/LiteLinker/blob/main/readme/1.png))
-![Social Media Opensource litelinker]([Image URL](https://github.com/moAminee/LiteLinker/blob/main/readme/2.png))
-![Social Media Opensource litelinker]([Image URL](https://github.com/moAminee/LiteLinker/blob/main/readme/3.png))
-![Social Media Opensource litelinker]([Image URL](https://github.com/moAminee/LiteLinker/blob/main/readme/4.png))
-![Social Media Opensource litelinker]([Image URL](https://github.com/moAminee/LiteLinker/blob/main/readme/5.png))
+![social media opensource litelinker](https://github.com/moAminee/LiteLinker/blob/main/readme/2.png)
+
+![social media opensource litelinker](https://github.com/moAminee/LiteLinker/blob/main/readme/3.png)
+
+![social media opensource litelinker](https://github.com/moAminee/LiteLinker/blob/main/readme/4.png)
+
+![social media opensource litelinker](https://github.com/moAminee/LiteLinker/blob/main/readme/5.png)
+
