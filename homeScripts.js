@@ -58,11 +58,11 @@
                 if(isMyPost){
                     editBtnContent = 
                     `
-                        <button  title="Delet post" class='btn btn-danger' style='margin-left: 5px; float: right' onclick="deletePostBtnClicked('${encodeURIComponent(JSON.stringify(post))}')"><span class="material-symbols-outlined">
+                        <button  title="Delet post" class='btn btn-outline-danger' style='margin-left: 5px; float: right' onclick="deletePostBtnClicked('${encodeURIComponent(JSON.stringify(post))}')"><span class="material-symbols-outlined">
                         delete
                         </span></button>
 
-                        <button title="Edit post" class='btn btn-secondary' style='float: right' onclick="editPostBtnClicked('${encodeURIComponent(JSON.stringify(post))}')"><span class="material-symbols-outlined">
+                        <button title="Edit post" class='btn btn-outline-secondary' style='float: right' onclick="editPostBtnClicked('${encodeURIComponent(JSON.stringify(post))}')"><span class="material-symbols-outlined">
                         edit
                         </span></button>
                     `
