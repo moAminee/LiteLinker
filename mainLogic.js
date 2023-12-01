@@ -257,24 +257,29 @@ function logout()
 }
 
 
-function showAlert(customMessage, type="success")
-{
-    const alertPlaceholder = document.getElementById('success-alert')
+function showAlert(customMessage, type = "success") {
+    const alertPlaceholder = document.getElementById('success-alert');
 
     const alert = (message, type) => {
-        const wrapper = document.createElement('div')
+        const wrapper = document.createElement('div');
         wrapper.innerHTML = [
             `<div class="alert alert-${type} alert-dismissible" role="alert">`,
             `   <div>${message}</div>`,
             '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
             '</div>'
-        ].join('')
+        ].join('');
 
-        alertPlaceholder.append(wrapper)
-    }
+        alertPlaceholder.append(wrapper);
 
-    alert(customMessage, type) 
-    
+        // Automatically close the alert after 2 seconds
+        setTimeout(() => {
+            wrapper.remove();
+        }, 2000);
+    };
+
+    alert(customMessage, type);
+
+
     // todo: hide the alert
     setTimeout(() => {
         // const alertToHide = bootstrap.Alert.getOrCreateInstance('#success-alert')
