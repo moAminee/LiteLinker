@@ -54,11 +54,15 @@ function getPosts()
 
             if(isMyPost){
                 editBtnContent = 
-                `
-                    <button class='btn btn-danger' style='margin-left: 5px; float: right' onclick="deletePostBtnClicked('${encodeURIComponent(JSON.stringify(post))}')">delete</button>
+                    `
+                        <button  title="Delet post" class='btn btn-danger' style='margin-left: 5px; float: right' onclick="deletePostBtnClicked('${encodeURIComponent(JSON.stringify(post))}')"><span class="material-symbols-outlined">
+                        delete
+                        </span></button>
 
-                    <button class='btn btn-secondary' style='float: right' onclick="editPostBtnClicked('${encodeURIComponent(JSON.stringify(post))}')">edit</button>
-                `
+                        <button title="Edit post" class='btn btn-secondary' style='float: right' onclick="editPostBtnClicked('${encodeURIComponent(JSON.stringify(post))}')"><span class="material-symbols-outlined">
+                        edit
+                        </span></button>
+                    `
             }
 
             if(post.title != null)
